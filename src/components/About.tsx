@@ -42,7 +42,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="sobre" ref={sectionRef} className="py-24 lg:py-32 bg-slate-50" aria-label="Sobre a Educa Consultoria">
+    <section id="sobre" ref={sectionRef} className="py-24 lg:py-32" style={{ background: "#F2EAD8" }} aria-label="Sobre a Educa Consultoria">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
 
@@ -111,7 +111,7 @@ export default function About() {
                 key={pillar.title}
                 className={`reveal-right delay-${(i + 2) * 100} card-hover bg-white rounded-2xl p-6 border border-slate-100 shadow-sm flex gap-5 items-start`}
               >
-                <div className="text-3xl flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-slate-50" aria-hidden="true">
+                <div className="text-3xl flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-xl" style={{ background: "#EDE5D8" }} aria-hidden="true">
                   {pillar.icon}
                 </div>
                 <div>

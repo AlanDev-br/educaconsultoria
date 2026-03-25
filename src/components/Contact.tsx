@@ -149,7 +149,7 @@ export default function Contact() {
 
   function inputClass(field: keyof FieldErrors): string {
     return [
-      "w-full bg-slate-50 border rounded-xl px-4 py-3 text-slate-800 text-sm",
+      "w-full border rounded-xl px-4 py-3 text-slate-800 text-sm",
       "placeholder-slate-400 transition-all input-brand",
       fieldErrors[field]
         ? "border-red-400 bg-red-50/50"

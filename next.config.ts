@@ -38,8 +38,8 @@ const nextConfig: NextConfig = {
             "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
             "font-src 'self' https://fonts.gstatic.com",
             "img-src 'self' data: blob:",
-            // Allow WhatsApp redirect target
-            "connect-src 'self' https://wa.me",
+            // External fetch targets: WhatsApp deep link + Open-Meteo weather API
+            "connect-src 'self' https://wa.me https://api.open-meteo.com",
           ].join("; "),
         },
       ],
