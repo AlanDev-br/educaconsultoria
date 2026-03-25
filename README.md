@@ -33,10 +33,10 @@ construída com Next.js 16, TypeScript e Tailwind CSS.
 
 Landing page institucional da **Educa Consultoria e Serviços Ltda** (Maceió – AL), desenvolvida com foco em três pilares:
 
-| Pilar | Decisões |
-|---|---|
-| **Performance** | Geração estática da página principal (SSG), imagens otimizadas com `next/image`, CSS animations sem JS externo |
-| **Segurança** | Validação server-side com Zod, rate limiting por IP, headers HTTP de segurança, nenhuma lógica crítica no frontend |
+| Pilar           | Decisões                                                                                                                |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Performance** | Geração estática da página principal (SSG), imagens otimizadas com `next/image`, CSS animations sem JS externo          |
+| **Segurança**   | Validação server-side com Zod, rate limiting por IP, headers HTTP de segurança, nenhuma lógica crítica no frontend      |
 | **Experiência** | Design responsivo mobile-first, animações por IntersectionObserver, scroll suave, formulário com feedback em tempo real |
 
 ---
@@ -91,13 +91,13 @@ A aplicação foi construída com o princípio de **nunca confiar no frontend**.
 
 **HTTP Security Headers** configurados em `next.config.ts`:
 
-| Header | Valor |
-|---|---|
-| `X-Frame-Options` | `DENY` (anti-clickjacking) |
-| `X-Content-Type-Options` | `nosniff` |
-| `Referrer-Policy` | `strict-origin-when-cross-origin` |
-| `Permissions-Policy` | `camera=(), microphone=(), geolocation=()` |
-| `Content-Security-Policy` | Configurado por origem |
+| Header                    | Valor                                      |
+| ------------------------- | ------------------------------------------ |
+| `X-Frame-Options`         | `DENY` (anti-clickjacking)                 |
+| `X-Content-Type-Options`  | `nosniff`                                  |
+| `Referrer-Policy`         | `strict-origin-when-cross-origin`          |
+| `Permissions-Policy`      | `camera=(), microphone=(), geolocation=()` |
+| `Content-Security-Policy` | Configurado por origem                     |
 
 ---
 
@@ -160,41 +160,18 @@ npm run typecheck  # Verificação de tipos TypeScript
 
 ---
 
-## Deploy
-
-### Vercel (recomendado)
-
-A forma mais simples de fazer deploy é conectar o repositório à [Vercel](https://vercel.com):
-
-1. Importe o repositório no painel da Vercel
-2. Configure as variáveis de ambiente (ver seção abaixo)
-3. Deploy automático a cada `git push`
-
-O projeto é detectado automaticamente como Next.js — nenhuma configuração adicional necessária.
-
-### Outras plataformas
-
-Qualquer plataforma que suporte Node.js ≥ 18 funciona (Railway, Render, VPS próprio):
-
-```bash
-npm run build
-npm run start        # Inicia na porta 3000
-```
-
----
-
 ## Variáveis de Ambiente
 
 Copie `.env.example` para `.env.local` e preencha:
 
-| Variável | Descrição | Obrigatório |
-|---|---|---|
-| `SMTP_HOST` | Host do servidor SMTP | Para envio de e-mail |
-| `SMTP_PORT` | Porta SMTP (ex: 587) | Para envio de e-mail |
-| `SMTP_USER` | Usuário SMTP | Para envio de e-mail |
-| `SMTP_PASS` | Senha de app do SMTP | Para envio de e-mail |
-| `CONTACT_EMAIL` | E-mail que recebe os contatos | Para envio de e-mail |
-| `NEXT_PUBLIC_SITE_URL` | URL pública do site | Para Open Graph |
+| Variável               | Descrição                     | Obrigatório          |
+| ---------------------- | ----------------------------- | -------------------- |
+| `SMTP_HOST`            | Host do servidor SMTP         | Para envio de e-mail |
+| `SMTP_PORT`            | Porta SMTP (ex: 587)          | Para envio de e-mail |
+| `SMTP_USER`            | Usuário SMTP                  | Para envio de e-mail |
+| `SMTP_PASS`            | Senha de app do SMTP          | Para envio de e-mail |
+| `CONTACT_EMAIL`        | E-mail que recebe os contatos | Para envio de e-mail |
+| `NEXT_PUBLIC_SITE_URL` | URL pública do site           | Para Open Graph      |
 
 > **Nota:** sem as variáveis SMTP configuradas, o formulário processa e valida normalmente, mas não envia e-mail. Os dados ficam registrados no log do servidor.
 
