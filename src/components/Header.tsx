@@ -7,9 +7,9 @@ import Image from "next/image";
 
 const NAV_LINKS = [
   { label: "Início",     href: "#hero"       },
+  { label: "Projeto",    href: "#projeto"    },
   { label: "Serviços",   href: "#servicos"   },
   { label: "Sobre",      href: "#sobre"      },
-  { label: "Resultados", href: "#resultados" },
   { label: "Contato",    href: "#contato"    },
 ] as const;
 
@@ -72,28 +72,32 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* Weather — fetched on mount, refreshed every 30 min */
+  /* Weather — fetched on mount, refreshed every 30 min.
+     AbortController cancels any in-flight request on unmount. */
   useEffect(() => {
+    const controller = new AbortController();
+
     async function fetchWeather() {
       try {
-        const res = await fetch(WEATHER_URL);
+        const res = await fetch(WEATHER_URL, { signal: controller.signal });
         if (!res.ok) return;
         const json = await res.json();
         const c = json.current;
-
         setWeather({
           temp: Math.round(c.temperature_2m),
-          // API uses weather_code; fall back to weathercode for older responses
           code: c.weather_code ?? c.weathercode ?? 0,
         });
       } catch {
-        // Fail silently — header works normally without weather data
+        // Includes AbortError on unmount — fail silently either way
       }
     }
 
     fetchWeather();
     const refresh = setInterval(fetchWeather, WEATHER_REFRESH);
-    return () => clearInterval(refresh);
+    return () => {
+      clearInterval(refresh);
+      controller.abort();
+    };
   }, []);
 
   function handleNavClick(href: string): void {

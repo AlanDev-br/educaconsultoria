@@ -609,16 +609,16 @@ function Hero() {
                                     },
                                     children: [
                                         {
-                                            value: "6+",
-                                            label: "Áreas de Atuação"
+                                            value: "4.768+",
+                                            label: "Professores Formados"
                                         },
                                         {
-                                            value: "AL",
-                                            label: "Maceió — Brasil"
+                                            value: "323",
+                                            label: "Encontros Formativos"
                                         },
                                         {
-                                            value: "∞",
-                                            label: "Compromisso com Educação"
+                                            value: "81,5%",
+                                            label: "Presença Média"
                                         }
                                     ].map((stat)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex flex-col items-center lg:items-start",
@@ -1450,29 +1450,28 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 ;
 const stats = [
     {
-        value: 6,
+        value: 4768,
         suffix: "+",
-        label: "Áreas de Atuação",
-        icon: "🎯"
+        label: "Professores Formados",
+        icon: "👩‍🏫"
     },
     {
-        value: 100,
+        value: 323,
+        suffix: "",
+        label: "Encontros Formativos",
+        icon: "📅"
+    },
+    {
+        value: 81,
         suffix: "%",
-        label: "Soluções Personalizadas",
-        icon: "⭐"
+        label: "Presença Média nos Cursos",
+        icon: "📊"
     },
     {
-        value: 3,
-        suffix: "+",
-        label: "Parcerias Institucionais",
-        icon: "🤝"
-    },
-    {
-        value: 0,
-        suffix: "AL",
-        label: "Maceió — Alagoas, Brasil",
-        icon: "📍",
-        static: true
+        value: 119,
+        suffix: "",
+        label: "Turmas Coordenadas",
+        icon: "🏫"
     }
 ];
 /** Animates a number from 0 to `target` using an ease-out cubic curve. */ function useCountUp(target, started, duration = 2000) {
@@ -1616,7 +1615,7 @@ function Stats() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
                                 className: "text-3xl sm:text-4xl font-black text-white mb-4",
-                                children: "Por que escolher a Educa?"
+                                children: "Resultados que falam por si"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Stats.tsx",
                                 lineNumber: 108,
@@ -1624,7 +1623,7 @@ function Stats() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-white/60 text-lg max-w-2xl mx-auto",
-                                children: "Somos especialistas em transformar conhecimento em resultados — com soluções completas, personalizadas e alinhadas às reais necessidades de cada projeto."
+                                children: "Números reais do nosso maior projeto: a Formação Continuada da Semed Maceió 2024/2025, onde a Educa atuou como executora operacional."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Stats.tsx",
                                 lineNumber: 111,
@@ -1656,27 +1655,28 @@ function Stats() {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-white/90 text-lg font-medium leading-relaxed",
                             children: [
-                                "🌟 ",
+                                "🏆 ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                    children: "LabFor – Laboratório de Formação"
+                                    children: "Formação Continuada Semed Maceió — 2024/2025"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Stats.tsx",
                                     lineNumber: 126,
                                     columnNumber: 16
                                 }, this),
-                                " — iniciativa de formação itinerante para professores, em parceria com o",
-                                " ",
+                                " — a Educa foi a executora operacional de um dos maiores programas de formação de professores da rede municipal, com ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                    children: "Programa Sinpete"
+                                    className: "text-brand-green",
+                                    children: "6.620 vagas ofertadas"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Stats.tsx",
                                     lineNumber: 128,
-                                    columnNumber: 13
+                                    columnNumber: 36
                                 }, this),
-                                " e o",
+                                " e",
                                 " ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                    children: "Programa Escola das Adolescências (MEC)"
+                                    className: "text-brand-green",
+                                    children: "323 encontros formativos"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Stats.tsx",
                                     lineNumber: 129,
@@ -1747,10 +1747,11 @@ const PILLARS = [
     }
 ];
 const DIFFERENTIALS = [
-    "Parceria com o Programa Sinpete – Ciência e Inovação",
+    "Executora operacional da Formação Continuada Semed Maceió 2024/2025",
+    "Controle de frequência, certificados e suporte a cursistas",
+    "Apoio logístico completo a formadores em campo",
     "LabFor – Laboratório de Formação para professores",
-    "Alinhamento com o Programa Escola das Adolescências (MEC)",
-    "Soluções 100% personalizadas para cada projeto"
+    "Parceria com o Programa Sinpete – Ciência e Inovação"
 ];
 function About() {
     _s();
@@ -1796,7 +1797,7 @@ function About() {
                                         "aria-hidden": "true"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 52,
+                                        lineNumber: 53,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1804,13 +1805,13 @@ function About() {
                                         children: "Sobre Nós"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 53,
+                                        lineNumber: 54,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/About.tsx",
-                                lineNumber: 51,
+                                lineNumber: 52,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1828,7 +1829,7 @@ function About() {
                                         children: "luzes"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 58,
+                                        lineNumber: 59,
                                         columnNumber: 15
                                     }, this),
                                     " ",
@@ -1836,7 +1837,7 @@ function About() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/About.tsx",
-                                lineNumber: 56,
+                                lineNumber: 57,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1848,14 +1849,14 @@ function About() {
                                         children: "Educa Consultoria e Serviços Ltda"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 72,
+                                        lineNumber: 73,
                                         columnNumber: 17
                                     }, this),
                                     " nasceu em Maceió (AL) com um propósito claro: ser parceira de instituições, redes de ensino e projetos que acreditam no poder transformador da educação."
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/About.tsx",
-                                lineNumber: 71,
+                                lineNumber: 72,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1863,7 +1864,7 @@ function About() {
                                 children: "Atuamos em formação de professores com metodologias ativas, programas de desenvolvimento profissional e gerencial, consultoria pedagógica, design, tradução e produção musical — integrando soluções criativas e educacionais em um só lugar."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/About.tsx",
-                                lineNumber: 77,
+                                lineNumber: 78,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("blockquote", {
@@ -1871,7 +1872,7 @@ function About() {
                                 children: '"Formar professores é muito mais do que repassar conteúdos: é inspirar, provocar sentido e fortalecer trajetórias."'
                             }, void 0, false, {
                                 fileName: "[project]/src/components/About.tsx",
-                                lineNumber: 84,
+                                lineNumber: 85,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1894,17 +1895,17 @@ function About() {
                                                         points: "20 6 9 17 4 12"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/About.tsx",
-                                                        lineNumber: 98,
+                                                        lineNumber: 99,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/About.tsx",
-                                                    lineNumber: 97,
+                                                    lineNumber: 98,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/About.tsx",
-                                                lineNumber: 93,
+                                                lineNumber: 94,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1912,24 +1913,24 @@ function About() {
                                                 children: item
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/About.tsx",
-                                                lineNumber: 101,
+                                                lineNumber: 102,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, item, true, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 92,
+                                        lineNumber: 93,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/About.tsx",
-                                lineNumber: 90,
+                                lineNumber: 91,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/About.tsx",
-                        lineNumber: 50,
+                        lineNumber: 51,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1947,7 +1948,7 @@ function About() {
                                             children: pillar.icon
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/About.tsx",
-                                            lineNumber: 114,
+                                            lineNumber: 115,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1957,7 +1958,7 @@ function About() {
                                                     children: pillar.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/About.tsx",
-                                                    lineNumber: 118,
+                                                    lineNumber: 119,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1965,19 +1966,19 @@ function About() {
                                                     children: pillar.text
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/About.tsx",
-                                                    lineNumber: 119,
+                                                    lineNumber: 120,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/About.tsx",
-                                            lineNumber: 117,
+                                            lineNumber: 118,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, pillar.title, true, {
                                     fileName: "[project]/src/components/About.tsx",
-                                    lineNumber: 110,
+                                    lineNumber: 111,
                                     columnNumber: 15
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1991,7 +1992,7 @@ function About() {
                                         "aria-hidden": "true"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 129,
+                                        lineNumber: 130,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1999,7 +2000,7 @@ function About() {
                                         children: "📍 Maceió – AL, atendendo todo o Brasil"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 130,
+                                        lineNumber: 131,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2007,7 +2008,7 @@ function About() {
                                         children: "Entre em contato e descubra como podemos colaborar com sua instituição ou projeto."
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 133,
+                                        lineNumber: 134,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2018,35 +2019,35 @@ function About() {
                                         children: "Vamos crescer juntos?"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/About.tsx",
-                                        lineNumber: 136,
+                                        lineNumber: 137,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/About.tsx",
-                                lineNumber: 125,
+                                lineNumber: 126,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/About.tsx",
-                        lineNumber: 108,
+                        lineNumber: 109,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/About.tsx",
-                lineNumber: 47,
+                lineNumber: 48,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/About.tsx",
-            lineNumber: 46,
+            lineNumber: 47,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/About.tsx",
-        lineNumber: 45,
+        lineNumber: 46,
         columnNumber: 5
     }, this);
 }

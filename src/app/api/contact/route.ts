@@ -13,6 +13,9 @@ function sanitizeForLog(value: string): string {
   return value.replace(/[\r\n\t]/g, " ").slice(0, 200);
 }
 
+// Minimal IPv4/IPv6 check — rejects obviously forged values before they enter the rate-limit key.
+const IP_RE = /^(?:\d{1,3}\.){3}\d{1,3}$|^[0-9a-f:]+$/i;
+
 /**
  * Resolves the real client IP from proxy headers.
  * X-Forwarded-For is set by most reverse proxies (Vercel, Nginx, Cloudflare).
@@ -20,8 +23,13 @@ function sanitizeForLog(value: string): string {
  */
 function getClientIp(req: NextRequest): string {
   const forwarded = req.headers.get("x-forwarded-for");
-  if (forwarded) return forwarded.split(",")[0].trim();
-  return req.headers.get("x-real-ip") ?? "unknown";
+  if (forwarded) {
+    const candidate = forwarded.split(",")[0].trim();
+    if (IP_RE.test(candidate)) return candidate;
+  }
+  const realIp = req.headers.get("x-real-ip")?.trim();
+  if (realIp && IP_RE.test(realIp)) return realIp;
+  return "unknown";
 }
 
 // ─── Route handler ────────────────────────────────────────────────────────────
@@ -112,8 +120,3 @@ export async function POST(req: NextRequest) {
   );
 }
 
-// Block all other HTTP verbs on this endpoint.
-export async function GET()    { return NextResponse.json({ error: "Método não permitido." }, { status: 405 }); }
-export async function PUT()    { return NextResponse.json({ error: "Método não permitido." }, { status: 405 }); }
-export async function DELETE() { return NextResponse.json({ error: "Método não permitido." }, { status: 405 }); }
-export async function PATCH()  { return NextResponse.json({ error: "Método não permitido." }, { status: 405 }); }

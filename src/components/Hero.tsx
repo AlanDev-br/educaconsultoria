@@ -103,9 +103,9 @@ export default function Hero() {
               style={{ animation: "fadeUp 0.6s ease-out 0.65s both" }}
             >
               {[
-                { value: "6+", label: "Áreas de Atuação" },
-                { value: "AL", label: "Maceió — Brasil" },
-                { value: "∞", label: "Compromisso com Educação" },
+                { value: "4.768+", label: "Professores Formados" },
+                { value: "323",    label: "Encontros Formativos" },
+                { value: "81,5%",  label: "Presença Média" },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col items-center lg:items-start">
                   <span className="text-2xl font-black text-white">{stat.value}</span>

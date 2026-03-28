@@ -21,10 +21,11 @@ const PILLARS = [
 ] as const;
 
 const DIFFERENTIALS = [
-  "Parceria com o Programa Sinpete – Ciência e Inovação",
+  "Executora operacional da Formação Continuada Semed Maceió 2024/2025",
+  "Controle de frequência, certificados e suporte a cursistas",
+  "Apoio logístico completo a formadores em campo",
   "LabFor – Laboratório de Formação para professores",
-  "Alinhamento com o Programa Escola das Adolescências (MEC)",
-  "Soluções 100% personalizadas para cada projeto",
+  "Parceria com o Programa Sinpete – Ciência e Inovação",
 ] as const;
 
 export default function About() {
