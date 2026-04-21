@@ -6,11 +6,11 @@ import Image from "next/image";
 // ─── Navigation ──────────────────────────────────────────────────────────────
 
 const NAV_LINKS = [
-  { label: "Início",     href: "#hero"       },
-  { label: "Projeto",    href: "#projeto"    },
-  { label: "Serviços",   href: "#servicos"   },
-  { label: "Sobre",      href: "#sobre"      },
-  { label: "Contato",    href: "#contato"    },
+  { label: "Início", href: "#hero" },
+  { label: "Projeto", href: "#projeto" },
+  { label: "Serviços", href: "#servicos" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "Contato", href: "#contato" },
 ] as const;
 
 const SCROLL_THRESHOLD = 20;
@@ -29,24 +29,24 @@ const WEATHER_REFRESH = 30 * 60 * 1_000; // 30 min
 
 /** WMO weather codes → emoji + short label */
 const WEATHER_CODES: Record<number, { icon: string; label: string }> = {
-  0:  { icon: "☀️",  label: "Céu Limpo"        },
-  1:  { icon: "🌤️", label: "Poucas Nuvens"     },
-  2:  { icon: "⛅",  label: "Parcialmente Nublado" },
-  3:  { icon: "☁️",  label: "Nublado"            },
-  45: { icon: "🌫️", label: "Neblina"            },
-  48: { icon: "🌫️", label: "Neblina"            },
-  51: { icon: "🌦️", label: "Garoa"              },
-  53: { icon: "🌦️", label: "Garoa"              },
-  55: { icon: "🌦️", label: "Garoa"              },
-  61: { icon: "🌧️", label: "Chuva Leve"         },
-  63: { icon: "🌧️", label: "Chuva"              },
-  65: { icon: "🌧️", label: "Chuva Intensa"      },
-  80: { icon: "🌦️", label: "Pancadas"           },
-  81: { icon: "🌦️", label: "Pancadas"           },
-  82: { icon: "⛈️",  label: "Pancadas Intensas" },
-  95: { icon: "⛈️",  label: "Tempestade"         },
-  96: { icon: "⛈️",  label: "Tempestade"         },
-  99: { icon: "⛈️",  label: "Tempestade"         },
+  0: { icon: "☀️", label: "Céu Limpo" },
+  1: { icon: "🌤️", label: "Poucas Nuvens" },
+  2: { icon: "⛅", label: "Parcialmente Nublado" },
+  3: { icon: "☁️", label: "Nublado" },
+  45: { icon: "🌫️", label: "Neblina" },
+  48: { icon: "🌫️", label: "Neblina" },
+  51: { icon: "🌦️", label: "Garoa" },
+  53: { icon: "🌦️", label: "Garoa" },
+  55: { icon: "🌦️", label: "Garoa" },
+  61: { icon: "🌧️", label: "Chuva Leve" },
+  63: { icon: "🌧️", label: "Chuva" },
+  65: { icon: "🌧️", label: "Chuva Intensa" },
+  80: { icon: "🌦️", label: "Pancadas" },
+  81: { icon: "🌦️", label: "Pancadas" },
+  82: { icon: "⛈️", label: "Pancadas Intensas" },
+  95: { icon: "⛈️", label: "Tempestade" },
+  96: { icon: "⛈️", label: "Tempestade" },
+  99: { icon: "⛈️", label: "Tempestade" },
 };
 
 interface WeatherState {
@@ -61,8 +61,8 @@ function getInfo(code: number) {
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export default function Header() {
-  const [scrolled,  setScrolled]  = useState(false);
-  const [menuOpen,  setMenuOpen]  = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [weather, setWeather] = useState<WeatherState | null>(null);
 
   /* Scroll detection */
@@ -110,12 +110,13 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-dark shadow-lg shadow-brand-blue/20" : "bg-transparent"
+        scrolled
+          ? "glass-dark shadow-lg shadow-brand-blue/20"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-
           {/* Logo */}
           <button
             onClick={() => handleNavClick("#hero")}
@@ -125,15 +126,18 @@ export default function Header() {
             <Image
               src="/educa-logo.png"
               alt="Educa Consultoria e Serviços"
-              width={160}
-              height={48}
-              className="h-10 w-auto object-contain transition-opacity group-hover:opacity-90"
+              width={260}
+              height={90}
+              className="h-14 w-auto object-contain transition-opacity group-hover:opacity-90"
               priority
             />
           </button>
 
           {/* Desktop navigation */}
-          <nav className="hidden md:flex items-center gap-6" aria-label="Menu principal">
+          <nav
+            className="hidden md:flex items-center gap-6"
+            aria-label="Menu principal"
+          >
             {NAV_LINKS.map(({ label, href }) => (
               <button
                 key={href}
@@ -141,7 +145,10 @@ export default function Header() {
                 className="text-white/80 hover:text-white text-sm font-medium transition-colors relative group"
               >
                 {label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all group-hover:w-full" aria-hidden="true" />
+                <span
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green transition-all group-hover:w-full"
+                  aria-hidden="true"
+                />
               </button>
             ))}
 
@@ -182,9 +189,15 @@ export default function Header() {
               aria-controls="mobile-menu"
             >
               <div className="w-6 flex flex-col gap-1.5" aria-hidden="true">
-                <span className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2"   : ""}`} />
-                <span className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? "opacity-0"                : ""}`} />
-                <span className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+                <span
+                  className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+                />
+                <span
+                  className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+                />
+                <span
+                  className={`block h-0.5 bg-white transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+                />
               </div>
             </button>
           </div>
@@ -215,7 +228,9 @@ export default function Header() {
           {info && (
             <div className="flex items-center gap-2 px-3 py-2 text-white/50 text-xs border-t border-white/10 mt-1 pt-3">
               <span>{info.icon}</span>
-              <span>{info.label} · {weather!.temp}°C</span>
+              <span>
+                {info.label} · {weather!.temp}°C
+              </span>
               <span className="ml-auto">📍 Maceió, AL</span>
             </div>
           )}
