@@ -123,7 +123,7 @@ export default function Header() {
             aria-label="Voltar ao início"
           >
             <Image
-              src="/educa-logo.jpeg"
+              src="/educa-logo.png"
               alt="Educa Consultoria e Serviços"
               width={160}
               height={48}

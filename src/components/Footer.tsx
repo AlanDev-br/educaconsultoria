@@ -64,7 +64,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2">
             <Image
-              src="/educa-logo.jpeg"
+              src="/educa-logo.png"
               alt="Educa Consultoria e Serviços"
               width={160}
               height={50}

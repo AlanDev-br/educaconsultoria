@@ -129,7 +129,7 @@ export default function Hero() {
 
               <div className="relative glass rounded-3xl p-8 lg:p-10 max-w-sm w-full">
                 <Image
-                  src="/educa-logo.jpeg"
+                  src="/educa-logo.png"
                   alt="Educa Consultoria e Serviços"
                   width={420}
                   height={140}
